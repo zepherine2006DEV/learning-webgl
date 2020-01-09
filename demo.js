@@ -1,18 +1,15 @@
 function main() {
 
-    console.log(`It's alive!`)
+    const canvas = document.querySelector("#glCanvas");         // find canvas element
+    const webGLContext = canvas.getContext("webgl");            // get the webgl context
 
-    const canvas = document.querySelector("#glCanvas");
-
-    const gl = canvas.getContext("webgl");
-
-    if (gl === null) {
-        alert("Unable to initialise WebGL.");
+    if (webGLContext === null) {                                // check if browswer supports webGL
+        alert("Unable to initialise WebGL");
         return;
     }
 
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);
-    gl.clear(gl.COLOR_BUFFER_BIT);
+    webGLContext.clearColor(0.0, 0.0, 0.0, 1.0);                // set the colour
+    webGLContext.clear(webGLContext.COLOR_BUFFER_BIT);          // redraw the canvas
 }
 
 window.onload = main;
