@@ -2,7 +2,7 @@
 
 This project aims to give me a basic understanding of WebGL.
 
-I'm going to use native WebGL, rather than one of the higher level frameworks based on it (e.g. Three.js), so that I can understand the underlying api.
+I'm going to use native WebGL, rather than one of the higher level frameworks based on it (e.g. Three.js), so that I can understand the underlying api. I'm going to code my own very simple vertex shader etc., rather than use one provided by a library.
 
 ## How to Install
 
@@ -20,6 +20,13 @@ Opening the page in the browser above will run the code, and the webGL graphics 
 So that I know my browser is set up to use WebGL,  
 I can see an area on my web page which will hold the graphics,  
 Or an error message if it does not support WebGL. 
+
+## Learning Notes
+
+### Key Concepts
+
+* Vertex - The point where two lines meet.
+* Vertex Shader - Function which converts original vertex positions into clipspace postions. Runs every time a shape is rendered. Output is saved to a special variable called `gl_Position`.
 
 ### Resources Used
 
